@@ -1,6 +1,7 @@
 #################################
 # Demo project                  #
 #################################
+
 Project requirements:
   Virtual machine with installed OS from RedHat family (RHEL, CentOS, Fedora) with the following software installed:
    - python3
