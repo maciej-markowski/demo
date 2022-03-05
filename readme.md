@@ -1,6 +1,4 @@
-#################################
 # Demo project                  #
-#################################
 
 Project requirements:
   Virtual machine with installed OS from RedHat family (RHEL, CentOS, Fedora) with the following software installed:
@@ -14,33 +12,16 @@ Project requirements:
   The project should have a simple README explaining how to set up the VM from scratch.
 
 
-#################################
 # Prerequisites                 #
-#################################
 
 - Windows machine with installed ansible, terraform and VirtualBox
 - VirtualBox installation directory added to PATH.
 
-#################################
 # Usage                         #
-#################################
 
 run init.ps powershell script
 
 
-#################################
 # Description                   #
-#################################
+tbd
 
-
-check  vboxmanage list hostonlyifs, create if not exists
-check ip range, based on that set demo-hostonly-network var
-
-#################################
-# TO DO                         #
-#################################
-
-add NAT network, configure as default gw to allow network connection
-
-
-# END mm@2022
