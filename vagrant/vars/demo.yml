@@ -1,0 +1,4 @@
+---
+configs:
+  name: 'centos-demo'
+  vm_ipv4address: '10.0.0.10'
