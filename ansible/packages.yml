@@ -1,0 +1,17 @@
+---
+- name: demo configuration
+  hosts: all
+
+  vars:
+    required_packages: ['python3',
+                        'ansible',
+                        'docker',
+                        'cockpit',
+                        'nginx']
+
+  tasks:
+    - name: install packages
+      yum:
+        name: "{{ required_packages }}"
+        state: latest
+
