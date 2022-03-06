@@ -1,0 +1,8 @@
+---
+configs:
+  #pubkey path relative to 'vagrant' directory
+  pubkey: '../files/key.pub'
+  vm_name: 'centos-demo'
+  vm_ipv4address: '192.168.57.10'
+  vm_memory: 2048
+  vm_cpus: 2

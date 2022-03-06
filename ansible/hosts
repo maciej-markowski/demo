@@ -1,0 +1,2 @@
+[default]
+demo-vm ansible_host=192.168.57.10
