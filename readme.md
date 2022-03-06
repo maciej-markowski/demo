@@ -16,28 +16,46 @@ Project requirements:
 
 
 (Linux)
-runme.sh
+> runme.sh
 
-(Windows subsystem for Linux)
-runme_wsl.sh
+(Windows subsystem for Linux)  <-- please note known issues section!
+> runme_wsl.sh
 
 
 
 # Prerequsites #
 
 
-Installed and executables added to PATH:
-- vagrant
-- virtualbox
-- ansible
+1. Installed and executables added to PATH: ##
+   - vagrant
+   - virtualbox
+   - ansible
 For Windows subsystem for Linux, vagrant and ansible are installed in WSL, virtualbox on Windows.
 
-Place your public key in openssh format into files directory as key.pub
+2. Place your public key in openssh format into files directory as key.pub
+
+3. Add centos-demo.example.com to /etc/hosts so it can be resolved to whatever IP address is assigned to VM i.e.:
+> 192.168.57.10	centos-demo.example.com www.centos-demo.example.com
 
 
 
  # known issues #
 
-Virtualbox enforces hostonly ip range to 192.168.56.0/21.
-Valid ranges can be modified in the /etc/vbox/networks.conf file. (For both WSL and Linux).
-https://www.virtualbox.org/manual/ch06.html#network_hostonl
+1. Windows Subsystem for Linux by default mounts C drive without 'metadata' flag - therefore setting proper permissions
+   for private key is not possible. 
+   Please either clone repo in linux filesystem (eg. /home/) or make sure metadata flag is present:
+
+>$ sudo vim /etc/wsl.conf
+>    [automount]
+>    enabled = true
+>    root = /
+>    options = "metadata"
+>    mountFsTab = true
+
+   and restart wsl.
+   reference: https://www.schakko.de/2020/01/10/fixing-unprotected-key-file-when-using-ssh-or-ansible-inside-wsl/
+
+
+2. Virtualbox enforces hostonly ip range to 192.168.56.0/21.
+   Valid ranges can be modified in the /etc/vbox/networks.conf file. (For both WSL and Linux).
+   reference: https://www.virtualbox.org/manual/ch06.html#network_hostonly

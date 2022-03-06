@@ -29,6 +29,11 @@
             ProtocolHeader: "X-Forwarded-Proto"
             AllowUnencrypted: true
 
+    - name: nginx group
+      group:
+        name: nginx
+        state: present
+
     - name: nginx user
       user:
         name: nginx
