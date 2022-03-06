@@ -1,0 +1,16 @@
+passes.yml
+vault.yml
+*.pyc
+*.retry
+/tests/.coverage
+/tests/htmlcov*
+/.tox
+/venv*/
+/.venv/
+.vscode/
+artifacts/
+__pycache__/
+*~
+.pytest_cache/
+/tests/output
+/tests/tests_ap.yml
