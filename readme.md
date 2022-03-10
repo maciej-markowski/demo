@@ -44,14 +44,14 @@ For Windows subsystem for Linux, vagrant and ansible are installed in WSL, Virtu
 1. Windows Subsystem for Linux by default mounts C drive without 'metadata' flag - therefore setting proper permissions
    for private key is not possible. 
    Please either clone repo in linux filesystem (eg. /home/) or make sure metadata flag is present:
-
->$ sudo vim /etc/wsl.conf
->    [automount]
->    enabled = true
->    root = /
->    options = "metadata"
->    mountFsTab = true
-
+```
+$ sudo vim /etc/wsl.conf
+    [automount]
+    enabled = true
+    root = /
+    options = "metadata"
+    mountFsTab = true
+```
    and restart wsl.
    reference: https://www.schakko.de/2020/01/10/fixing-unprotected-key-file-when-using-ssh-or-ansible-inside-wsl/
 
