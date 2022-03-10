@@ -81,8 +81,8 @@
                 # See: https://github.com/cockpit-project/cockpit/issues/5239
                 gzip off;
               }
-              ssl_certificate     /etc/pki/tls/certs/"{{ vm_name }}".crt;
-              ssl_certificate_key /etc/pki/tls/private/"{{ vm_name }}".key;
+              ssl_certificate     /etc/pki/tls/certs/{{ vm_name }}.crt;
+              ssl_certificate_key /etc/pki/tls/private/{{ vm_name }}.key;
               ssl_protocols       TLSv1.1 TLSv1.2;
               ssl_ciphers         HIGH:!aNULL:!MD5;
 
