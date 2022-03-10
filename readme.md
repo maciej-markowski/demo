@@ -30,6 +30,8 @@ Project requirements:
    - virtualbox
    - ansible
 For Windows subsystem for Linux, vagrant and ansible are installed in WSL, Virtualbox on Windows.
+   - For WSL2 additional plugin is required:
+   > vagrant plugin install virtualbox_WSL2
 
 2. Place your public key in openssh format into files directory as key.pub
 
