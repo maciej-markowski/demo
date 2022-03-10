@@ -13,30 +13,30 @@ Project requirements:
 
 
 # Usage #
+*see prerequisites*
 
-
-(Linux)
 > runme.sh
 
-(Windows subsystem for Linux)  <-- please note known issues section!
-> runme_wsl.sh
+
 
 
 
 # Prerequsites #
 
+0. Machine with *Linux* or *Windows + Windows Subsystem for Linux enabled*
 
 1. Installed and executables added to PATH: ##
    - vagrant
    - virtualbox
    - ansible
-For Windows subsystem for Linux, vagrant and ansible are installed in WSL, virtualbox on Windows.
+For Windows subsystem for Linux, vagrant and ansible are installed in WSL, Virtualbox on Windows.
 
 2. Place your public key in openssh format into files directory as key.pub
 
-3. Add centos-demo.example.com to /etc/hosts so it can be resolved to whatever IP address is assigned to VM i.e.:
-> 192.168.57.10	centos-demo.example.com www.centos-demo.example.com
+3. If you want, you can adjust variables in *variable* file
 
+4. Add <<VM_NAME>>.example.com to /etc/hosts so it can be resolved to whatever IP address is assigned to VM i.e.:
+> 192.168.57.10	centos-demo.example.com www.centos-demo.example.com
 
 
  # known issues #
